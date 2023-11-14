@@ -1,14 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+    --gold: #D4AF37;
+    --black: #28282B;
+    --white: #FFFFF4
+}
+
+#root{
+    background-color: var(--black);
 }
 
 /* Header */
 header{
     display: flex;
+    height: 100px;
 }
 
 .logo{
-    width: 150px;
+    font-family: 'Irish Grover',sans-serif;
+    color: var(--gold);
+    width: 130px;
+    text-align: center;
+    margin-left: 16px;
+    margin-top: 16px;
+    font-size: 24px;
     border: 1px solid black;
 }
