@@ -10,28 +10,39 @@
     --white: #FFFFF4
 }
 
-body{
+body {
     background-color: var(--black);
 }
 
-/* Header */
-header{
+/* H E A D E R */
+header {
     display: flex;
     height: 100px;
     justify-content: space-between;
     padding: 16px;
 }
 
-.logo{
+.logo {
     font-family: 'Irish Grover',sans-serif;
     color: var(--gold);
     width: 130px;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     border: 1px solid black;
 }
 
-.menu-btn{
+.menu-btn {
     width: 32px;
     height: 32px;
+}
+
+
+/* F O O T E R */
+footer {
+    height: 50px;
+    color: var(--white);
+    font-family: 'Irish Grover', sans-serif;
+    font-size: 1rem;
+    border-top: 2px solid var(--gold);
+    text-align: center;
 }
