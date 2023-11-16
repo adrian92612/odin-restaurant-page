@@ -5,7 +5,7 @@ const createHeroImg = () => {
     heroImg.classList.add('hero-img')
     heroImg.src = steakImg
 
-    return hero
+    return heroImg
 }
 
 const createSlogan = () => {
@@ -15,7 +15,7 @@ const createSlogan = () => {
 export default function createHomePage() {
     const heroSection = document.createElement('div')
 
-    heroSection.appendChild(createHeroImg)
-    heroSection.appendChild()
+    heroSection.appendChild(createHeroImg())
+    // heroSection.appendChild()
     return heroSection
 }
