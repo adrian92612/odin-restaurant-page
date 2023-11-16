@@ -14,10 +14,10 @@
 body {
   background-color: var(--black);
   font-family: "Junge", cursive;
+  color: var(--white);
 }
 
 #root {
-  border: 1px solid red;
   margin: 0 16px;
 }
 
@@ -35,7 +35,6 @@ header {
   width: 130px;
   text-align: center;
   font-size: 1.5rem;
-  border: 1px solid black;
 }
 
 .menu-btn {
@@ -55,6 +54,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+/* - - - - - - - - - - */
 
 /* H O M E   P A G E */
 .hero-img {
@@ -80,3 +80,32 @@ footer {
   font-size: 1.5rem;
   color: var(--gold);
 }
+/* - - - - - - - - - - */
+
+/* M E N U  P A G E */
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.menu-list > h6 {
+  color: var(--gold);
+  text-decoration: underline;
+  font-size: 1.5rem;
+  flex-grow: 1;
+  width: 100%;
+  letter-spacing: 0.3rem;
+}
+.menu-list div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.menu-list div:nth-child(2) {
+  flex-grow: 1;
+}
+/* - - - - - - - - - - */
