@@ -4,14 +4,18 @@ import createFooter from "./footer";
 import createHomePage from "./Pages/home";
 import createMenuPage from "./Pages/menu";
 
-const goToMenu = () => {
-  const main = document.getElementById("main");
-  main.replaceChild(createMenuPage(), main.firstChild);
-};
+const togglePages = () => {
+  const main = document.querySelector("#main");
 
-const setClicks = () => {
-  const btn = document.querySelector(".menu-btn");
-  btn.addEventListener("click", goToMenu);
+  const homeBtn = document.querySelector(".home-btn");
+  homeBtn.addEventListener("click", () => {
+    main.replaceChild(createHomePage(), main.firstChild);
+  });
+
+  const menuBtn = document.querySelector(".menu-btn");
+  menuBtn.addEventListener("click", () => {
+    main.replaceChild(createMenuPage(), main.firstChild);
+  });
 };
 
 (function init() {
@@ -23,5 +27,5 @@ const setClicks = () => {
   root.appendChild(createHeader());
   root.appendChild(mainSection);
   root.appendChild(createFooter());
-  setClicks();
+  togglePages();
 })();
