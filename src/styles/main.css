@@ -23,6 +23,7 @@ body {
 
 /* H E A D E R */
 header {
+  position: relative;
   display: flex;
   height: 100px;
   justify-content: space-between;
@@ -37,9 +38,31 @@ header {
   font-size: 1.5rem;
 }
 
-.menu-btn {
+.menu-icon {
   width: 32px;
   height: 32px;
+}
+
+.float-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  width: 300px;
+  right: 0;
+  background-color: rgba(100, 100, 100, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.nav-btn {
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  border: none;
 }
 /* - - - - - - - - - - */
 
