@@ -6,15 +6,15 @@ import createMenuPage from "./Pages/menu";
 
 const togglePages = () => {
   const main = document.querySelector("#main");
-
-  const homeBtn = document.querySelector(".home-btn");
-  homeBtn.addEventListener("click", () => {
-    main.replaceChild(createHomePage(), main.firstChild);
-  });
-
-  const menuBtn = document.querySelector(".menu-btn");
-  menuBtn.addEventListener("click", () => {
-    main.replaceChild(createMenuPage(), main.firstChild);
+  const navBtn = document.querySelectorAll(".nav-btn");
+  navBtn.forEach((e) => {
+    e.addEventListener("click", () => {
+      if (e.innerText == "Home") {
+        main.replaceChild(createHomePage(), main.firstChild);
+      } else if (e.innerText == "Menu") {
+        main.replaceChild(createMenuPage(), main.firstChild);
+      }
+    });
   });
 };
 
