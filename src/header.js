@@ -54,6 +54,12 @@ const createNav = () => {
   menuIcon.classList.add("menu-icon");
   menuIcon.src = icon;
   menuIcon.addEventListener("click", toggleNav);
+  window.addEventListener("click", (e) => {
+    const box = document.querySelector(".float-nav");
+    if (e.target != box && e.target != menuIcon) {
+      box.classList.add("hide");
+    }
+  });
 
   nav.appendChild(menuIcon);
   nav.appendChild(createfloatingNav());

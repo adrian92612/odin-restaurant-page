@@ -6,6 +6,7 @@ import createMenuPage from "./Pages/menu";
 
 const togglePages = () => {
   const main = document.querySelector("#main");
+
   const navBtn = document.querySelectorAll(".nav-btn");
   navBtn.forEach((e) => {
     e.addEventListener("click", () => {
@@ -20,6 +21,7 @@ const togglePages = () => {
 
 (function init() {
   const root = document.getElementById("root");
+
   const mainSection = document.createElement("div");
   mainSection.setAttribute("id", "main");
   mainSection.appendChild(createHomePage());
@@ -27,5 +29,6 @@ const togglePages = () => {
   root.appendChild(createHeader());
   root.appendChild(mainSection);
   root.appendChild(createFooter());
+
   togglePages();
 })();
