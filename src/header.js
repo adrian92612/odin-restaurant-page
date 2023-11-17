@@ -1,4 +1,5 @@
 import icon from "./assets/menu-icon.svg";
+import closeIcon from "./assets/close-icon.svg";
 
 const createLogo = () => {
   const logo = document.createElement("div");
@@ -12,29 +13,38 @@ const createLogo = () => {
 
 const createfloatingNav = () => {
   const floatNav = document.createElement("div");
-  floatNav.classList.add("float-nav");
+  floatNav.classList.add("float-nav", "hide");
 
   const homeBtn = document.createElement("button");
-  homeBtn.classList.add("home-btn", "nav-btn");
+  homeBtn.classList.add("nav-btn");
   homeBtn.innerText = "Home";
   floatNav.appendChild(homeBtn);
 
   const menuBtn = document.createElement("button");
-  menuBtn.classList.add("menu-btn", "nav-btn");
+  menuBtn.classList.add("nav-btn");
   menuBtn.innerText = "Menu";
   floatNav.appendChild(menuBtn);
 
   const aboutUsBtn = document.createElement("button");
-  aboutUsBtn.classList.add("about-us-btn", "nav-btn");
+  aboutUsBtn.classList.add("nav-btn");
   aboutUsBtn.innerText = "About Us";
   floatNav.appendChild(aboutUsBtn);
 
   const contactUsBtn = document.createElement("button");
-  contactUsBtn.classList.add("contact-us-btn", "nav-btn");
+  contactUsBtn.classList.add("nav-btn");
   contactUsBtn.innerText = "Contact Us";
   floatNav.appendChild(contactUsBtn);
 
   return floatNav;
+};
+
+const toggleNav = () => {
+  const nav = document.querySelector(".float-nav");
+  if (nav.classList.contains("hide")) {
+    nav.classList.remove("hide");
+  } else {
+    nav.classList.add("hide");
+  }
 };
 
 const createNav = () => {
@@ -43,8 +53,12 @@ const createNav = () => {
   const menuIcon = document.createElement("img");
   menuIcon.classList.add("menu-icon");
   menuIcon.src = icon;
+  menuIcon.addEventListener("click", toggleNav);
 
-  return menuIcon;
+  nav.appendChild(menuIcon);
+  nav.appendChild(createfloatingNav());
+
+  return nav;
 };
 
 export default function createHeader() {
@@ -52,6 +66,6 @@ export default function createHeader() {
 
   header.appendChild(createLogo());
   header.appendChild(createNav());
-  header.appendChild(createfloatingNav());
+
   return header;
 }
