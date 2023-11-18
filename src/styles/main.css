@@ -18,7 +18,9 @@ body {
 }
 
 #root {
-  margin: 0 16px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 600px;
 }
 
 /* H E A D E R */
@@ -51,8 +53,8 @@ header {
   padding: 10px 0;
   width: 300px;
   right: 0;
-  background-color: rgba(100, 100, 100, 0.2);
-  backdrop-filter: blur(5px);
+  background-color: rgba(100, 100, 100, 0.5);
+  backdrop-filter: blur(20px);
   border-radius: 10px;
 }
 
@@ -68,6 +70,7 @@ header {
   color: var(--gold);
   font-size: 1.2rem;
   font-weight: bolder;
+  text-shadow: 0 0 10px #28282b;
 }
 
 .hide {
@@ -90,7 +93,7 @@ footer {
 /* H O M E   P A G E */
 .hero-img {
   width: 100%;
-  /* height: 100dvh; */
+  height: calc(100dvh - 150px);
   object-fit: cover;
   object-position: center;
 }
@@ -111,7 +114,7 @@ footer {
 }
 /* - - - - - - - - - - */
 
-/* M E N U  P A G E */
+/* M E N U    P A G E */
 .menu-list {
   display: flex;
   flex-wrap: wrap;
@@ -138,3 +141,29 @@ footer {
   flex-grow: 1;
 }
 /* - - - - - - - - - - */
+
+/* A B O U T    U S */
+.about-us-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Junge", cursive;
+}
+
+.about-us-heading {
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+.text-wrapper {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.2;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--gold);
+  color: var(--black);
+}

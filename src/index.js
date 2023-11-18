@@ -3,6 +3,7 @@ import createHeader from "./header";
 import createFooter from "./footer";
 import createHomePage from "./Pages/home";
 import createMenuPage from "./Pages/menu";
+import createAboutUsPage from "./Pages/about";
 
 const togglePages = () => {
   const main = document.querySelector("#main");
@@ -10,10 +11,13 @@ const togglePages = () => {
   const navBtn = document.querySelectorAll(".nav-btn");
   navBtn.forEach((e) => {
     e.addEventListener("click", () => {
+      console.log(e);
       if (e.innerText == "Home") {
         main.replaceChild(createHomePage(), main.firstChild);
       } else if (e.innerText == "Menu") {
         main.replaceChild(createMenuPage(), main.firstChild);
+      } else if (e.innerText == "About Us") {
+        main.replaceChild(createAboutUsPage(), main.firstChild);
       }
     });
   });
@@ -24,7 +28,7 @@ const togglePages = () => {
 
   const mainSection = document.createElement("div");
   mainSection.setAttribute("id", "main");
-  mainSection.appendChild(createHomePage());
+  mainSection.appendChild(createAboutUsPage());
 
   root.appendChild(createHeader());
   root.appendChild(mainSection);
