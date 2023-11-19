@@ -21,6 +21,7 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 600px;
+  box-shadow: 0 0 5px var(--white);
 }
 
 /* H E A D E R */
@@ -153,7 +154,10 @@ footer {
 
 .about-us-heading {
   color: var(--gold);
-  font-size: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .text-wrapper {
@@ -163,7 +167,7 @@ footer {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  background-color: var(--gold);
-  color: var(--black);
+  gap: 4rem;
+  border-radius: 10px;
+  color: var(--white);
 }
