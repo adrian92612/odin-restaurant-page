@@ -4,6 +4,7 @@ import createFooter from "./footer";
 import createHomePage from "./Pages/home";
 import createMenuPage from "./Pages/menu";
 import createAboutUsPage from "./Pages/about";
+import createContactUsPage from "./Pages/Contact Us";
 
 const togglePages = () => {
   const main = document.querySelector("#main");
@@ -18,6 +19,8 @@ const togglePages = () => {
         main.replaceChild(createMenuPage(), main.firstChild);
       } else if (e.innerText == "About Us") {
         main.replaceChild(createAboutUsPage(), main.firstChild);
+      } else if (e.innerText == "Contact Us") {
+        main.replaceChild(createContactUsPage(), main.firstChild);
       }
     });
   });
