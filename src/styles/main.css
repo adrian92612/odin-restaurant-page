@@ -21,7 +21,7 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 600px;
-  box-shadow: 0 0 5px var(--white);
+  box-shadow: 0 0 10px var(--gold);
 }
 
 /* H E A D E R */
@@ -48,13 +48,14 @@ header {
 
 .float-nav {
   position: absolute;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 10px 0;
   width: 300px;
   right: 0;
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(20px);
   border-radius: 10px;
 }
@@ -71,7 +72,7 @@ header {
   color: var(--gold);
   font-size: 1.2rem;
   font-weight: bolder;
-  text-shadow: 0 0 10px #28282b;
+  text-shadow: 0 0 20px #28282b;
 }
 
 .hide {
@@ -88,6 +89,7 @@ footer {
   border-top: 2px solid var(--gold);
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 /* - - - - - - - - - - */
 
@@ -97,6 +99,7 @@ footer {
   height: calc(100dvh - 150px);
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
 }
 
 .slogan {
@@ -104,9 +107,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   gap: 25px;
-  height: 500px;
+  padding: 2rem 1rem;
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 .slogan-heading {
@@ -170,4 +173,18 @@ footer {
   gap: 4rem;
   border-radius: 10px;
   color: var(--white);
+}
+
+/* C O N T A C T    U S */
+.map-container {
+  position: relative;
+  padding-bottom: 75%;
+}
+
+.map-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }

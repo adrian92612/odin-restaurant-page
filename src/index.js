@@ -31,7 +31,7 @@ const togglePages = () => {
 
   const mainSection = document.createElement("div");
   mainSection.setAttribute("id", "main");
-  mainSection.appendChild(createAboutUsPage());
+  mainSection.appendChild(createContactUsPage());
 
   root.appendChild(createHeader());
   root.appendChild(mainSection);
