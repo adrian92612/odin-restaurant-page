@@ -1,20 +1,20 @@
-const createOperationHours = () => {
-  const operationHours = document.createElement("div");
-  operationHours.className = "operation-hours";
+const createOperatingHours = () => {
+  const operatingHours = document.createElement("div");
+  operatingHours.className = "operating-hours";
 
   const heading = document.createElement("h3");
-  heading.innerText = "Operation Hours";
+  heading.innerText = "Operating Hours";
 
   const weekdays = document.createElement("p");
   weekdays.innerText = "Weekdays: 9AM ~ 10PM";
   const weekends = document.createElement("p");
   weekends.innerText = `Weekends: 9AM ~ 12MN`;
 
-  operationHours.appendChild(heading);
-  operationHours.appendChild(weekdays);
-  operationHours.appendChild(weekends);
+  operatingHours.appendChild(heading);
+  operatingHours.appendChild(weekdays);
+  operatingHours.appendChild(weekends);
 
-  return operationHours;
+  return operatingHours;
 };
 
 const reservation = () => {
@@ -32,18 +32,18 @@ const reservation = () => {
     const inputDiv = document.createElement("div");
     inputDiv.innerHTML = `
       <label for=${id}>${label}</label>
-      <input type=${type} id=${id} name=${id} placeholder=${placeholder}>`;
+      <input type=${type} id=${id} name=${id} placeholder='${placeholder}'>`;
     return inputDiv;
   };
 
   formContainer.appendChild(
-    inputType(`Full Name`, `fullname`, `text`, `Full Name`)
+    inputType(`Full Name`, `fullname`, `text`, `John/Jane Doe`)
   );
   formContainer.appendChild(
-    inputType(`Contact Number`, `contactnumber`, `tel`, `Contact Number`)
+    inputType(`Contact Number`, `contactnumber`, `tel`, `0965 *** ****`)
   );
   formContainer.appendChild(
-    inputType(`Email Address`, `email`, `email`, `Email Address`)
+    inputType(`Email Address`, `email`, `email`, `amber@steakhouse.com`)
   );
   formContainer.appendChild(
     inputType(`Date and Time`, `datetime`, `datetime-local`)
@@ -84,7 +84,7 @@ export default function createContactUsPage() {
   const contactUsPage = document.createElement("div");
   contactUsPage.className = "contact-us";
 
-  contactUsPage.appendChild(createOperationHours());
+  contactUsPage.appendChild(createOperatingHours());
   contactUsPage.appendChild(location());
   contactUsPage.appendChild(reservation());
 
