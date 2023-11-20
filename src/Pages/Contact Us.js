@@ -20,10 +20,47 @@ const createOperationHours = () => {
 const reservation = () => {
   const container = document.createElement("div");
   container.className = "reservation-container";
+
+  const heading = document.createElement("h3");
+  heading.innerText = `Book a Reservation`;
+  container.appendChild(heading);
+
+  const formContainer = document.createElement("form");
+  formContainer.className = "form-container";
+
+  const inputType = (label, id, type, placeholder) => {
+    const inputDiv = document.createElement("div");
+    inputDiv.innerHTML = `
+      <label for=${id}>${label}</label>
+      <input type=${type} id=${id} name=${id} placeholder=${placeholder}>`;
+    return inputDiv;
+  };
+
+  formContainer.appendChild(
+    inputType(`Full Name`, `fullname`, `text`, `Full Name`)
+  );
+  formContainer.appendChild(
+    inputType(`Contact Number`, `contactnumber`, `tel`, `Contact Number`)
+  );
+  formContainer.appendChild(
+    inputType(`Email Address`, `email`, `email`, `Email Address`)
+  );
+  formContainer.appendChild(
+    inputType(`Date and Time`, `datetime`, `datetime-local`)
+  );
+  const submitBtn = document.createElement("button");
+  submitBtn.innerText = "Book Now";
+  submitBtn.setAttribute("type", "submit");
+  formContainer.appendChild(submitBtn);
+
+  container.appendChild(formContainer);
+
+  return container;
 };
 
 const location = () => {
   const locationDiv = document.createElement("div");
+  locationDiv.className = "location";
 
   const heading = document.createElement("h3");
   heading.innerText = `Location`;
@@ -49,6 +86,7 @@ export default function createContactUsPage() {
 
   contactUsPage.appendChild(createOperationHours());
   contactUsPage.appendChild(location());
+  contactUsPage.appendChild(reservation());
 
   return contactUsPage;
 }
